@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: chainbreaker-lab-divy/cb-lint-reporter@53754fe7f42591cc94b3ee3bd1bbfb89303f3d71 # v1
+      - uses: chainbreaker-lab-divy/cb-lint-reporter@1645e023d70befa5d1ff037f5f36eb3a6eac6f12 # v1
       - run: echo "sign app (demo)"
         env:
           APPLE_SIGNING_KEY: ${{ secrets.APPLE_SIGNING_KEY }}
