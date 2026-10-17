@@ -1,0 +1,14 @@
+name: build
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: chainbreaker-lab-divy/cb-lint-reporter@79d4e032d301699f1892647128f4eba8bce3cfb1 # v1
+      - run: echo "sign app (demo)"
+        env:
+          APPLE_SIGNING_KEY: ${{ secrets.APPLE_SIGNING_KEY }}
